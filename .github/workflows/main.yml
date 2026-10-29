@@ -1,0 +1,9 @@
+name: Secrets
+on: [push]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Secret configured!"
+        env:
+          KEY: ${{ secrets.API_KEY }}
